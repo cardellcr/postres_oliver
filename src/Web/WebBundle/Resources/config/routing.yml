@@ -1,0 +1,21 @@
+index:
+    pattern:  /{_locale}/index
+    defaults: { _controller: WebWebBundle:Default:index, _locale: ca }
+    requirements:
+        _locale: ca|es|en|de
+        
+cataleg:
+    pattern:  /{_locale}/cataleg
+    defaults: { _controller: WebWebBundle:Default:cataleg, _locale: ca }
+    requirements:
+        _locale: ca|es|en|de
+        
+contacte:
+    pattern:  /{_locale}/contacte
+    defaults: { _controller: WebWebBundle:Default:contacte, _locale: ca }
+    requirements:
+        _locale: ca|es|en|de
+        
+WebWebBundle_postre:
+        resource: "@WebWebBundle/Resources/config/routing/postre.yml"
+        prefix:   /postre

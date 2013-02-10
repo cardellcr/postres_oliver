@@ -1,0 +1,309 @@
+html, body {
+    font: 13px/1.4 "Droid Serif",Georgia,Times,serif;
+    color: #fff;
+    height: 100%;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+#menu {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    margin-left: 40px;
+}
+
+#menu a {
+    color: #680000;
+    float: left;
+    font: 12px/10px Trump,sans-serif;
+    padding: 14px 16px 8px;
+/*    text-transform: uppercase;*/
+}
+
+#menu a:hover {
+    color: #fff;
+}
+
+#menu .active {
+    color: #fff;
+    cursor: default;
+}
+
+#header {
+    border-bottom: 1px solid #C0C0C0;
+/*    border-top: 3px solid #333333;*/
+    height: 110px;
+    overflow: hidden;
+    position: relative;
+}
+
+#logo {
+    margin-top: 5px;
+    width: 260px;
+    float: left;
+}
+
+#logo a {
+    color: white;
+}
+
+#name {
+    font-size: 30px;
+    float: left;
+    margin-right: 3px;
+}
+
+#name2 {
+    font-size: 30px;
+    color: #680000;
+}
+
+#sub_name {
+    font-size: 26px;
+    color: #680000;
+    float: left;
+    margin-right: 3px;
+}
+
+#sub_name2 {
+    font-size: 26px;
+}
+
+#content {
+    min-height: 290px;
+    color: #000;
+    margin-top: 50px;
+}
+
+.title {
+    color: #000000;
+    font: bold 18px/18px Trump,Arial,sans-serif;
+    text-transform: uppercase;
+    border-bottom: 1px dotted #AAAAAA;
+    padding-bottom: 10px;
+}
+
+#qui_som_left {
+    width: 415px;
+    float: left;
+}
+
+#qui_som_right {
+    margin-left: 15px;
+    width: 415px;
+    float: left;
+}
+
+#presupost_left {
+    width: 265px;
+    height: 184px;
+    float: left;
+}
+
+#presupost_right {
+    margin-left: 15px;
+    width: 560px;
+    float: left;
+}
+
+body > #container {
+    min-height: 100%;
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 845px;
+    padding: 0 12px;
+    position: relative;
+}
+
+#footer {
+    height: 100px;
+    margin-top: 20px;
+}
+
+.menu_footer {
+    display: inline;
+    font: 11px "Droid Serif",georgia,serif;
+}
+
+.menu_footer a {
+    color: #666666;
+    float: left;
+    padding: 3px 6px;
+}
+
+#contact_footer {
+    float: right;
+    margin-right: 225px;
+    color: #666;
+}
+
+#form_description {
+    width: 557px;
+    height: 160px;
+    border: 1px solid #E0E0E0;
+    color: #656565;
+    line-height: 27px;
+}
+
+#presupost_left input {
+    border: 1px solid #E0E0E0;
+    color: #656565;
+    height: 27px;
+    line-height: 27px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    width: 220px;
+}
+
+.telefon {
+    margin-top: 30px;
+    line-height: 27px;
+    color: #656565;
+    font-size: 27px;
+}
+
+#language {
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+#language a {
+    color: #680000;
+    padding: 2px;
+    font: 10px/10px Trump,sans-serif;
+    text-transform: uppercase;
+}
+
+#description_index {
+    background-color: black;
+    height: 129px;
+    left: 12px;
+    margin-left: 35px;
+    opacity: 0.75;
+    filter:alpha(opacity=75); /* For IE8 and earlier */
+    position: absolute;
+    top: 270px;
+    width: 779px;
+    color: white;
+    font-size: 26px;
+    text-align: right;
+    display: none;
+}
+
+#description_cataleg {
+    background-color: black;
+    height: 50px;
+    left: 12px;
+    margin-left: 35px;
+    opacity: 0.75;
+    filter:alpha(opacity=75); /* For IE8 and earlier */
+    position: absolute;
+    top: 200px;
+    width: 779px;
+    color: white;
+    font-size: 34px;
+    text-align: left;
+    display: none;
+}
+
+#description_productes {
+    background-color: black;
+    height: 300px;
+    left: 12px;
+    margin-left: 35px;
+    opacity: 0.65;
+    filter:alpha(opacity=65); /* For IE8 and earlier */
+    position: absolute;
+    top: 161px;
+    width: 779px;
+    color: white;
+    font-size: 34px;
+    text-align: left;
+    display: none;
+}
+
+/* div over description_productes */
+#description_fotos_productes {
+    height: 75px;
+    left: 12px;
+    margin-left: 78px;
+    position: absolute;
+    top: 270px;
+    width: 415px;
+    color: white;
+    font-size: 34px;
+    text-align: left;
+    display: none;
+}
+
+/* div where id fotos are shown */
+#foto {
+    background-color: black;
+    height: 300px;
+    left: 526px;
+    position: absolute;
+    top: 161px;
+    width: 300px;
+    color: white;
+    display: none;
+}
+
+.fotos_productes {
+    margin-top: 5px;
+    margin-right: 5px;
+    float:left;
+}
+
+#description_contacte {
+    background-color: black;
+    height: 191px;
+    left: 12px;
+    margin-left: 35px;
+    opacity: 0.75;
+    filter:alpha(opacity=75); /* For IE8 and earlier */
+    position: absolute;
+    top: 270px;
+    width: 779px;
+    color: white;
+    font-size: 34px;
+    text-align: left;
+    display: none;
+    text-align: center;
+}
+    
+#description {
+    position: absolute;
+    left: 100px;
+    top: 355px;
+}
+
+#title_postre {
+    color: white;
+    font-size: 16px;
+    float: left;
+}
+
+#price_postre {
+    color: white;
+    font-size: 16px;
+    float: left;
+    padding-left: 20px;
+}
+
+#description2 {
+    color: white;
+    font-size: 12px;
+    clear: both;
+}
+
+.new_postre {
+    color: white;
+}

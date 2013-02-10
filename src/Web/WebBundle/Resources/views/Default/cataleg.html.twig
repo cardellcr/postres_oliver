@@ -1,0 +1,58 @@
+{% extends 'WebWebBundle::layout.html.twig' %}
+
+{% block stylesheets %} 
+    <link class="stylesheet" href="{{ asset('bundles/webweb/css/jquery.lightbox-0.5.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('bundles/webweb/js/jquery.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#description_cataleg").fadeIn(2000);
+            setTimeout(function(){$("#description_productes").fadeIn(2000);},1500)
+            setTimeout(function(){$("#description_fotos_productes").fadeIn(2000);},1500)
+        });
+        
+        function showFoto (foto, name, price, description) {
+            $('#foto').css('display', 'block');
+            $('#foto').html(
+                '<img class="thumb" style="width: 414x; height: 300px;" src="/postres_oliver/web/bundles/webweb/images/cataleg/' + foto + '"/>'
+            );
+            $('#description').html(
+                '<div id="title_postre">' + name + '</div>' +
+                '<div id="price_postre">' + price + '&nbsp;&euro;</div>' +
+                '<div id="description2">' + {% trans %} description {% endtrans %} + '</div>'
+            );
+        }
+    </script>
+{% endblock %}
+
+{% block menu %} 
+    <div class="menu">
+       <a href="{{ path('index') }}">{% trans %}Index{% endtrans %}</a>
+       <a class="active" href="{{ path('cataleg') }}">{% trans %}Catàleg{% endtrans %}</a>
+       <a href="{{ path('contacte') }}">{% trans %}Contacte{% endtrans %}</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <img style="margin-left:35px;" src="/postres_oliver/web/bundles/webweb/images/postres_01.jpg"/>
+
+    <div id="description_cataleg">
+        <div style="margin-left: 10px;">Catàleg de productes</div>
+    </div>
+
+    <div id="description_productes"></div>
+    <div id="description_fotos_productes">
+        {% if postres is defined %}
+            {% for postre in postres  %}
+                <img class="thumb" style="width: 70px; height: 70px;" src="/postres_oliver/web/bundles/webweb/images/cataleg/{{ postre.getFotoThumb }}" onclick="showFoto('{{ postre.foto }}', '{{ postre.name }}', '{{ postre.price }}', '{{ postre.name }}');"/>
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+    <div id="description"></div>
+    
+    <div id="foto"></div>
+    
+{% endblock %}

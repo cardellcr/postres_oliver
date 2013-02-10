@@ -1,0 +1,33 @@
+{% extends 'WebWebBundle::layout.html.twig' %}
+
+{% block stylesheets %} 
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+
+{% block menu %} 
+{% endblock %}
+
+{% block content %}
+    
+    <div class="new_postre">
+        <h1>Postre creation</h1>
+    
+        <form action="{{ path('postre_create') }}" method="post" {{ form_enctype(form) }}>
+            {{ form_widget(form) }}
+            <p>
+                <button type="submit">Create</button>
+            </p>
+        </form>
+        
+        <ul class="record_actions">
+            <li>
+                <a href="{{ path('postre') }}">
+                    Back to the list
+                </a>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}

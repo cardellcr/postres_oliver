@@ -1,0 +1,30 @@
+postre:
+    pattern:  /
+    defaults: { _controller: "WebWebBundle:Postre:index" }
+
+postre_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "WebWebBundle:Postre:show" }
+
+postre_new:
+    pattern:  /new
+    defaults: { _controller: "WebWebBundle:Postre:new" }
+
+postre_create:
+    pattern:  /create
+    defaults: { _controller: "WebWebBundle:Postre:create" }
+    requirements: { _method: post }
+
+postre_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "WebWebBundle:Postre:edit" }
+
+postre_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "WebWebBundle:Postre:update" }
+    requirements: { _method: post }
+
+postre_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "WebWebBundle:Postre:delete" }
+    requirements: { _method: post }

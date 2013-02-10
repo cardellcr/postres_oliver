@@ -1,0 +1,32 @@
+{% extends 'WebWebBundle::layout.html.twig' %}
+
+{% block stylesheets %} 
+{% endblock %}
+
+{% block javascripts %} 
+    <script type="text/javascript" src="{{ asset('bundles/webweb/js/jquery.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#description_index").fadeIn(3000);
+        });
+    </script>
+{% endblock %}
+
+{% block menu %} 
+    <div class="menu">
+       <a class="active" href="{{ path('index') }}">{% trans %}Index{% endtrans %}</a>
+       <a href="{{ path('cataleg') }}">{% trans %}Catàleg{% endtrans %}</a>
+       <a href="{{ path('contacte') }}">{% trans %}Contacte{% endtrans %}</a>
+    </div>
+{% endblock %}
+
+{% block content %}																							
+	<img style="margin-left:35px;" src="{{ asset('bundles/webweb/images/postres_01.jpg') }}"/>
+
+        <div id="description_index">
+            <div>Postres casolans a domicili</div>
+            <div style="font-size: 14px;">Portam els seus postres a qualsevol barri de palma, raiguer i zona nord</div>
+            <div style="font-size: 14px;">Truca'ns i consulti la disponibilitat al seu poble</div>
+        </div>
+{% endblock %}
+
